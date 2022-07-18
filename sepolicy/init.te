@@ -11,3 +11,6 @@ allow init system_file:lnk_file create_file_perms;
 
 #fix adb in some cases
 allow init adbd_exec:lnk_file read;
+
+#thermal
+allow init sysfs_thermal:file w_file_perms;
