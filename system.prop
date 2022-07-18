@@ -17,3 +17,6 @@ persist.wm.enable_remote_keyguard_animation=0
 
 #for qcom volte
 persist.vendor.vilte_support=0
+
+#thermal
+vendor.sys.thermal.data.path=/data/vendor/thermal/

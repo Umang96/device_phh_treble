@@ -5299,6 +5299,8 @@ case "$target" in
 		echo 1612800 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq
 	fi
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/pl
+	
+	echo 9 > /sys/class/thermal/thermal_message/sconfig
 
 	# Enable bus-dcvs
 	for device in /sys/devices/platform/soc
