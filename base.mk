@@ -40,6 +40,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_COPY_FILES += \
 	device/phh/treble/vndk-detect:system/bin/vndk-detect \
 	device/phh/treble/vndk.rc:system/etc/init/vndk.rc \
+	device/phh/treble/init.qcom.power.rc:system/etc/init/init.qcom.power.rc
 
 #USB Audio
 PRODUCT_COPY_FILES += \
@@ -65,7 +66,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
 	device/phh/treble/empty:system/phh/empty \
-	device/phh/treble/phh-on-boot.sh:system/bin/phh-on-boot.sh
+	device/phh/treble/phh-on-boot.sh:system/bin/phh-on-boot.sh \
+	device/phh/treble/init.qcom.post_boot.sh:system/bin/init.qcom.post_boot.sh
 
 PRODUCT_PACKAGES += \
 	treble-environ-rc \
