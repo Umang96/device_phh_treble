@@ -15,8 +15,21 @@ ro.boot.realme.lockstate=0
 #Fixes fingerprint unlock delay
 persist.wm.enable_remote_keyguard_animation=0
 
+#brightness
+persist.sys.phh.backlight.scale=1
+
 #for qcom volte
 persist.vendor.vilte_support=0
+persist.dbg.vt_avail_ovr=1
+persist.dbg.volte_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+persist.dbg.allow_ims_off=1
+
+#media & camera
+persist.sys.phh.disable_soundvolume_effect=1
+persist.sys.phh.include_all_cameras=true
+persist.sys.phh.caf.media_profile=true
+persist.sys.phh.caf.audio_policy=1
 
 #thermal
 vendor.sys.thermal.data.path=/data/vendor/thermal/
