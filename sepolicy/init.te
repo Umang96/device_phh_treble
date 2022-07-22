@@ -14,3 +14,4 @@ allow init adbd_exec:lnk_file read;
 
 #thermal
 allow init sysfs_thermal:file w_file_perms;
+allow init sysfs_devices_system_cpu:file w_file_perms;
