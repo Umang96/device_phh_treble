@@ -46,8 +46,8 @@ on property:sys.boot_completed=1
 
     # Setup runtime cpusets
     write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/foreground/cpus 0-3,5-6
-    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/foreground/cpus 0-2,4-7
+    write /dev/cpuset/background/cpus 0-2
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/restricted/cpus 0-3
 
@@ -69,7 +69,23 @@ on property:sys.boot_completed=1
     write /dev/blkio/blkio.group_idle 2000
     write /dev/blkio/background/blkio.group_idle 0
     
+    # set thermal config
     write /sys/class/thermal/thermal_message/sconfig 9
+
+    # swappiness & page-cluster
+    write /proc/sys/vm/page-cluster 0
+    write /proc/sys/vm/swappiness 100
+
+    # cpu schedutil
+    write /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres 50
+    write /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres 30
+    write /proc/sys/kernel/sched_upmigrate "90 90"
+    write /proc/sys/kernel/sched_downmigrate "80 80"
+    write /proc/sys/kernel/sched_group_upmigrate 95
+    write /proc/sys/kernel/sched_group_downmigrate 85
+    write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1344000 1:1344000"
+    write /sys/devices/system/cpu/cpu_boost/input_boost_ms 200
+    write /sys/devices/system/cpu/cpu_boost/sched_boost_on_input 1
 
 on property:init.svc.recovery=running
     trigger enable-low-power

@@ -1,1 +1,4 @@
 genfscon sysfs /board_properties u:object_r:sysfs_board_properties:s0
+genfscon proc /sys/kernel/sched_upmigrate u:object_r:proc_sched_tune:s0
+genfscon proc /sys/kernel/sched_downmigrate u:object_r:proc_sched_tune:s0
+genfscon proc /sys/vm/swappiness u:object_r:proc_sched_tune:s0
