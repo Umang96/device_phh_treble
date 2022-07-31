@@ -54,7 +54,6 @@ TARGET_USES_ION := true
 TARGET_SCREEN_DENSITY := 420
 
 $(call inherit-product, vendor/hardware_overlay/overlay.mk)
-$(call inherit-product, vendor/aosp/prebuilt/Lawnchair/lawnchair.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
