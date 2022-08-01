@@ -4,3 +4,5 @@ genfscon proc /sys/kernel/sched_downmigrate u:object_r:proc_sched_tune:s0
 genfscon proc /sys/kernel/sched_group_upmigrate u:object_r:proc_sched_tune:s0
 genfscon proc /sys/kernel/sched_group_downmigrate u:object_r:proc_sched_tune:s0
 genfscon proc /sys/vm/swappiness u:object_r:proc_sched_tune:s0
+genfscon proc /sys/kernel/sched_lib_name u:object_r:proc_sched_tune:s0
+genfscon proc /sys/kernel/sched_lib_mask_force u:object_r:proc_sched_tune:s0
