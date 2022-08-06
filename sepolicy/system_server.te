@@ -13,3 +13,5 @@ allow system_server storaged:process getattr;
 allow system_server mediaprovider_app:process getattr;
 allow system_server mediaserver:process getattr;
 allow system_server isolated_app:process getattr;
+allow system_server system_suspend:process getattr;
+allow system_server mediaprovider:process getattr;
