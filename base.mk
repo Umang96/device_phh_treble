@@ -223,7 +223,8 @@ PRODUCT_PACKAGES += \
 
 # Privapp-permissions whitelist for PhhTrebleApp
 PRODUCT_COPY_FILES += \
-	device/phh/treble/privapp-permissions-me.phh.treble.app.xml:system/etc/permissions/privapp-permissions-me.phh.treble.app.xml
+	device/phh/treble/privapp-permissions-me.phh.treble.app.xml:system/etc/permissions/privapp-permissions-me.phh.treble.app.xml \
+	device/phh/treble/privapp-permissions-com.umang96.special.features.xml:system/etc/permissions/privapp-permissions-com.umang96.special.features.xml
 
 # Remote debugging
 PRODUCT_COPY_FILES += \

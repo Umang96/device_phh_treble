@@ -77,16 +77,16 @@ on property:sys.boot_completed=1
     write /proc/sys/vm/swappiness 100
 
     # cpu schedutil
-    write /proc/sys/kernel/sched_upmigrate "80 80"
-    write /proc/sys/kernel/sched_downmigrate "60 60"
-    write /proc/sys/kernel/sched_group_upmigrate 80
-    write /proc/sys/kernel/sched_group_downmigrate 60
     write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1612800 1:1612800"
     write /sys/devices/system/cpu/cpu_boost/input_boost_ms 200
-    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq 1804800
-    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_load 65
+    write /proc/sys/kernel/sched_upmigrate "85 85"
+    write /proc/sys/kernel/sched_downmigrate "70 70"
+    write /proc/sys/kernel/sched_group_upmigrate 85
+    write /proc/sys/kernel/sched_group_downmigrate 70
+    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq 1612800
+    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_load 75
     write /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq 2150400
-    write /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_load 65
+    write /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_load 75
     write /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq 2457600
     write /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_load 75
 
