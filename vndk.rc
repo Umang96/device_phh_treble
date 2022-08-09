@@ -3,13 +3,7 @@ import /system/etc/init/init.qcom.power.rc
 on post-fs
 	exec - root -- /system/bin/vndk-detect
 	exec - root -- /system/bin/rw-system.sh
-    # set dalvik stuff for 8gb ram
-    setprop dalvik.vm.heapstartsize 24m
-    setprop dalvik.vm.heapgrowthlimit 256m
-    setprop dalvik.vm.heapsize 512m
-    setprop dalvik.vm.heaptargetutilization 0.46
-    setprop dalvik.vm.heapminfree 8m
-    setprop dalvik.vm.heapmaxfree 48m
+    exec u:r:phhsu_daemon:s0 -- /system/bin/set-dalvik-props.sh
 	mount none /system/etc/usb_audio_policy_configuration.xml /vendor/etc/usb_audio_policy_configuration.xml bind
     setprop ro.vndk.version ${persist.sys.vndk}
 	export LD_PRELOAD :
